@@ -10,8 +10,8 @@ import UIKit
 class GoodViewController: UIViewController {
     
     @IBOutlet weak var goodSetupLabel: UILabel!
-    var goodSetup = "good joke setup text"
-    var goodPunchline = "good joke punchline text"
+    var goodSetup = "A programmer had a problem. He thought to himself, 'I know, I'll solve this using threads!'"
+    var goodPunchline = "has Now problems. two he"
     
     override func viewDidLoad() {
         super.viewDidLoad()

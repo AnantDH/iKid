@@ -10,8 +10,8 @@ import UIKit
 class PunViewController: UIViewController {
     @IBOutlet weak var punSetupLabel: UILabel!
     
-    var jokeSetup = "pun setup"
-    var jokePunchline = "pun punchline"
+    var jokeSetup = "I had this great idea for a belt made of watches..."
+    var jokePunchline = "But I gave it up when I realized that it would be a waist of time."
     override func viewDidLoad() {
         super.viewDidLoad()
         punSetupLabel.text = jokeSetup

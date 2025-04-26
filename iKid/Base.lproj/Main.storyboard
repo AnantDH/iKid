@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ygs-td-ckB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OS6-eP-0Qd">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Good View Controller-->
+        <!--Good Joke-->
         <scene sceneID="IZt-hW-yAB">
             <objects>
                 <viewController id="ygs-td-ckB" customClass="GoodViewController" customModule="iKid" sceneMemberID="viewController">
@@ -16,14 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert joke here*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-gh-Tvf">
-                                <rect key="frame" x="130.66666666666666" y="416" width="131.99999999999997" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert joke here*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjy-gh-Tvf">
+                                <rect key="frame" x="21.666666666666657" y="416" width="350" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Ag3-xH-t2k"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-kM-8bN">
-                                <rect key="frame" x="317" y="749" width="60" height="35"/>
+                                <rect key="frame" x="317" y="700" width="60" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
@@ -41,6 +44,7 @@
                             <constraint firstItem="UsJ-RQ-1bJ" firstAttribute="trailing" secondItem="CJy-kM-8bN" secondAttribute="trailing" constant="16" id="gLS-37-xUq"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Good Joke" image="beats.studiobudsplus" catalog="system" id="x2S-kI-SGy"/>
                     <connections>
                         <outlet property="goodSetupLabel" destination="yjy-gh-Tvf" id="gB9-GF-5F1"/>
                     </connections>
@@ -49,7 +53,26 @@
             </objects>
             <point key="canvasLocation" x="-68" y="-804"/>
         </scene>
-        <!--Pun View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="fE1-XB-tiK">
+            <objects>
+                <tabBarController id="OS6-eP-0Qd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RRW-ok-pYe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ygs-td-ckB" kind="relationship" relationship="viewControllers" id="VdS-2h-Zzv"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="TGg-al-alc"/>
+                        <segue destination="9el-zm-Abo" kind="relationship" relationship="viewControllers" id="OEm-Vq-FMB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7HE-Ec-pxo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2270" y="37"/>
+        </scene>
+        <!--Pun-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PunViewController" customModule="iKid" sceneMemberID="viewController">
@@ -57,14 +80,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Insert Pun*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-Q9-eeo">
-                                <rect key="frame" x="150.33333333333334" y="416" width="92.333333333333343" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Insert Pun*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1f-Q9-eeo">
+                                <rect key="frame" x="21.666666666666657" y="416" width="350" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="w1D-0M-m7v"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL1-eV-rRS">
-                                <rect key="frame" x="317" y="749" width="60" height="35"/>
+                                <rect key="frame" x="317" y="700" width="60" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
@@ -82,6 +108,7 @@
                             <constraint firstItem="lL1-eV-rRS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hya-JW-Mlw"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Pun" image="figure.rower" catalog="system" id="idL-qT-RTQ"/>
                     <connections>
                         <outlet property="punSetupLabel" destination="l1f-Q9-eeo" id="SnZ-zC-3tt"/>
                     </connections>
@@ -90,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="-68" y="4"/>
         </scene>
-        <!--Dad View Controller-->
+        <!--Dad Joke-->
         <scene sceneID="qKL-8a-shV">
             <objects>
                 <viewController id="9el-zm-Abo" customClass="DadViewController" customModule="iKid" sceneMemberID="viewController">
@@ -98,14 +125,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert dad joke*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-u0-4JQ">
-                                <rect key="frame" x="133" y="416" width="127" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*insert dad joke*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-u0-4JQ">
+                                <rect key="frame" x="21.666666666666657" y="416" width="350" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="U7Y-Mj-toL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9a-Cg-Mf2">
-                                <rect key="frame" x="317" y="749" width="60" height="35"/>
+                                <rect key="frame" x="317" y="700" width="60" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
@@ -123,6 +153,7 @@
                             <constraint firstItem="LSM-u0-4JQ" firstAttribute="centerX" secondItem="W1z-q5-XIz" secondAttribute="centerX" id="UKb-kP-q51"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dad Joke" image="iphone.homebutton.slash.circle.fill" catalog="system" id="mHo-D0-GeA"/>
                     <connections>
                         <outlet property="dadSetupLabel" destination="LSM-u0-4JQ" id="i2v-mK-O7J"/>
                     </connections>
@@ -139,8 +170,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Insert Punchline*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTp-c3-RIh">
-                                <rect key="frame" x="128" y="381.33333333333331" width="137.33333333333337" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Insert Punchline*" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTp-c3-RIh">
+                                <rect key="frame" x="21.666666666666657" y="381.33333333333331" width="350" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="QCu-ve-fO7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -167,6 +201,9 @@
         <segue reference="j9f-18-YFW"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="beats.studiobudsplus" catalog="system" width="128" height="59"/>
+        <image name="figure.rower" catalog="system" width="128" height="110"/>
+        <image name="iphone.homebutton.slash.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

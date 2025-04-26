@@ -9,8 +9,8 @@ import UIKit
 
 class DadViewController: UIViewController {
     @IBOutlet weak var dadSetupLabel: UILabel!
-    var dadSetup = "dad joke setup"
-    var dadPunchline = "dad joke punchline"
+    var dadSetup = "I accidentally gave my wife a glue stick instead of her lip stick..."
+    var dadPunchline = "She still isn’t talking to me"
     
     override func viewDidLoad() {
         super.viewDidLoad()
