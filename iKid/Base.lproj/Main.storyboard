@@ -166,7 +166,7 @@
         <scene sceneID="b6n-0I-ORn">
             <objects>
                 <viewController id="flJ-8r-kbP" customClass="PunchlineViewController" customModule="iKid" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YPK-4p-uM7">
+                    <view key="view" contentMode="scaleToFill" semanticContentAttribute="playback" id="YPK-4p-uM7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -198,7 +198,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="j9f-18-YFW"/>
+        <segue reference="0LR-YM-lHj"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="beats.studiobudsplus" catalog="system" width="128" height="59"/>

@@ -24,5 +24,10 @@ class PunViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! PunchlineViewController
         destination.punchline = jokePunchline
+        if let sheet = destination.sheetPresentationController {
+            sheet.detents = [.large()]
+            sheet.prefersGrabberVisible = true
+            sheet.prefersEdgeAttachedInCompactHeight = true
+        }
     }
 }

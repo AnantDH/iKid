@@ -23,7 +23,12 @@ class DadViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! PunchlineViewController
-            destinationVC.punchline = dadPunchline
+        let destination = segue.destination as! PunchlineViewController
+            destination.punchline = dadPunchline
+        if let sheet = destination.sheetPresentationController {
+            sheet.detents = [.large()]  
+            sheet.prefersGrabberVisible = true
+            sheet.prefersEdgeAttachedInCompactHeight = true
+        }
     }
 }
